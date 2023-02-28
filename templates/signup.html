@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>회원가입</title>
+
+</head>
+<body>
+    <form action="/signup/" method="post">
+        {% csrf_token %}
+        <p>ID <input type="text" name="id">
+            <input type="button" value="중복확인"></p>
+        <p>비밀번호 <input type="password" name="password1"></p>
+        <p>비밀번호 확인 <input type="password" name="password2"></p>
+        <p>이메일 <input type="text" name="email"></p>
+        <p>이름 <input type="text" name="name" placeholder="홍길동"></p>
+        <p>학번 <input type="text" name="student_id" placeholder="2071000"></p>
+        <p>전공 <input type="text" name="major" placeholder="사이버보안전공"></p>
+        <p>포지션 <input type="radio" name="position" value="OB"> OB
+            <input type="radio" name="position" value="YB"> YB
+            <input type="radio" name="position" value="Others"> Others
+        </p>
+        <p>트랙<input type="radio" name="track" value="Beginner"> 비기너
+              <input type="radio" name="track" value="Challenger"> 챌린저
+        </p>
+        <select size="5">
+            <option name="gisu" value="1">1</option>
+            <option name="gisu" value="2">2</option>
+            <option name="gisu" value="3">3</option>
+            <option name="gisu" value="4">4</option>
+            <option name="gisu" value="5">5</option>
+            <option name="gisu" value="6">6</option>
+            <option name="gisu" value="7">7</option>
+            <option name="gisu" value="8">8</option>
+            <option name="gisu" value="9">9</option>
+            <option name="gisu" value="10">10</option>
+        </select> 기
+        <input type="hidden" name="validation" value="valid">
+        <input type="submit">
+    </form>
+</body>
+</html>
